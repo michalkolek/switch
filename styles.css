@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  box-sizing: content-box;
+}
+
+#outer {
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+  width: 40px;
+  position: relative;
+  vertical-align: middle;
+}
+
+#bar {
+  transform: border-color 0.3 ease;
+  border: 7px solid #b9b9b9;
+  border-radius: 7px;
+  position: absolute;
+  top: 3px;
+  width: 23px;
+}
+
+#circleOuter {
+  transition: transform 0.6s ease;
+}
+
+#circleInner {
+  transition: border-color 0.3s ease;
+  border: 10px solid #fafafa;
+  border-radius: 100%;
+  position: absolute;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#outer[aria-checked="true"] #bar {
+  border-color: rgba(42, 86, 198, 0.54);
+}
+
+#outer[aria-checked="true"] #circleOuter {
+  transform: translate(17px);
+}
+
+#outer[aria-checked="true"] #circleInner {
+  border-color: #009688;
+}
